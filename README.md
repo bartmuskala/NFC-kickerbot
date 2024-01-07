@@ -59,12 +59,23 @@ Add the details to the **nfcbot.py** code:
 
 Add your credentials in the **set_env.sh** script for safety reasons:
 
-    MYSQL_USER = 'your_username'
-    MYSQL_PASSWORD = 'your_password'
+    MYSQL_USER=your_username
+    MYSQL_PASSWORD=your_password
 
 A simple solution is to give 'your_database_name' as an argument to the script from [mattbell87](https://gist.github.com/mattbell87/1e678cc850e0ed66444b02a8cb6a094f).
 
     ./create-mysql.bash your_database_name
+
+### Validate your set_env.sh file
+
+The file should look like this:
+
+    # set_env.sh
+
+    export SLACK_API_TOKEN_APP=xoxb-app-token
+    export SIGNING_SECRET=signing-key-from-slack
+    export MYSQL_USER=your-user
+    export MYSQL_PASSWORD=your-password
 
 ### Set up your colors :) 
 
