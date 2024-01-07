@@ -106,14 +106,15 @@ Files in this folder are executed when the network is up.
     # Start ngrok service on port 3000, make sure to replace with your unique URL. The port is the port used in the main script.
     ngrok http --domain=firm-wahoo-equally.ngrok-free.app 3000 &
     
-    # Start TightVNC, this is optional but easy to have when you want a GUI
+    # Start TightVNC, this is optional but easy to have when you want a GUI. You still have to set it up via sudo apt-get install tightvncserver
+
     tightvncserver &
 
     # Set your environment variables
-    source set_env.sh &
+    source /your_path/to/file/set_env.sh &
     
     # Start your Python script
-    python /home/bartmuskala/Documents/Coding/nfcbot.py &
+    python /your_path/to/file/nfcbot.py &
 
 What the script does:
 1. start an ngrok service so the slackeventsapi is accessible from anywhere
