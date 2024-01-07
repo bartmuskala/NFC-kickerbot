@@ -7,7 +7,7 @@ ngrok http --domain=change-this-part.ngrok-free.app 3000 &
 tightvncserver &
 
 # Set your environment variables
-source /path/to/NFC-kickerbot/set_env.sh &
+source /path/to/NFC-kickerbot/set_env.sh
 
 # Start your Python script
-python /path/to/NFC-kickerbot/nfcbot.py &
+python /path/to/NFC-kickerbot/nfcbot.py

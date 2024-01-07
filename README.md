@@ -111,10 +111,10 @@ Files in this folder are executed when the network is up.
     tightvncserver &
 
     # Set your environment variables
-    source /your_path/to/file/set_env.sh &
+    source /your_path/to/file/set_env.sh
     
     # Start your Python script
-    python /your_path/to/file/nfcbot.py &
+    python /your_path/to/file/nfcbot.py
 
 What the script does:
 1. start an ngrok service so the slackeventsapi is accessible from anywhere

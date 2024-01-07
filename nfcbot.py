@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # NFC KICKERBOT
 # See https://github.com/bartmuskala/NFC-kickerbot for documentation
 #
