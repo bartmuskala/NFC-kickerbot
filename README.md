@@ -58,6 +58,7 @@ Add the details to the **nfcbot.py** code:
     MYSQL_DATABASE = 'your_database_name'
 
 Add your credentials in the **set_env.sh** script for safety reasons:
+
     MYSQL_USER = 'your_username'
     MYSQL_PASSWORD = 'your_password'
 
