@@ -41,20 +41,25 @@ The bot is required to share messages in a slack channel where it asks users to 
 5. Install the bot to the channel.
 
 The bot key you need (not to be confused with a user key) starts with 'xoxb'.
-Add the credentials to your script's code:
+Add the slack channel's name to the **nfcbot.py** code:
 
     CHANNEL_NAME = '#channel-name'
-    SLACK_API_TOKEN_APP = 'xoxb-xxx'
-    SIGNING_SECRET = 'xxx'
+
+Add the slack credentials to the **set_env.sh** script. Use the provided template **(example____set_env.sh)** and remove the example____ part.
+    SLACK_API_TOKEN_APP=xoxb-xxx
+    SIGNING_SECRET=xxx
 
 ### Set up a MySQL database
 
 Set up a MySQL database and make sure to provide the details to the script. 
+Add the details to the **nfcbot.py** code:
 
     MYSQL_HOST = '127.0.0.1' # or localhost
+    MYSQL_DATABASE = 'your_database_name'
+
+Add your credentials in the **set_env.sh** script for safety reasons:
     MYSQL_USER = 'your_username'
     MYSQL_PASSWORD = 'your_password'
-    MYSQL_DATABASE = 'your_database_name'
 
 A simple solution is to give 'your_database_name' as an argument to the script from [mattbell87](https://gist.github.com/mattbell87/1e678cc850e0ed66444b02a8cb6a094f).
 
@@ -91,6 +96,9 @@ Files in this folder are executed when the network is up.
     
     # Start TightVNC, this is optional but easy to have when you want a GUI
     tightvncserver &
+
+    # Set your environment variables
+    source set_env.sh &
     
     # Start your Python script
     python /home/bartmuskala/Documents/Coding/nfcbot.py &

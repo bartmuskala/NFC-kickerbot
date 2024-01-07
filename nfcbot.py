@@ -17,6 +17,7 @@ import matplotlib.pyplot as plt
 from io import BytesIO
 from slack_sdk.web import WebClient
 from slack_sdk.errors import SlackApiError
+import os
 
 # Add ATR code line for the NFC reader to work with the pyscard library - don't adjust, should work like this
 srTreeATR = \
@@ -28,10 +29,9 @@ srTreeMask = \
 NFC_DEVICE_PATH = 0
 
 # Define Slack settings
-#SLACK_API_TOKEN = 'xoxp-327124877237-326350115056-6390160751223-22b1a003e9a895ce64ca4c71eaa50841' # user token
 CHANNEL_NAME = '#kickerstats'
-SLACK_API_TOKEN_APP = 'xoxb-327124877237-4425733387269-55tYXGac14oVFm7mw10Rz8Zz' # app token
-SIGNING_SECRET = '6f0ac5192bebfaa5ce989ba1c337691b'
+SLACK_API_TOKEN_APP = os.environ.get('SLACK_API_TOKEN_APP')
+SIGNING_SECRET = os.environ.get('SIGNING_SECRET')
 
 # Customizable colors
 COLOR_GAMES_WON = '#53b4c5'  # Games Won color (Blue)
@@ -40,8 +40,8 @@ COLOR_WIN_RATIO = '#e65000'  # Win Ratio color (Red)
 
 # Define MySQL settings for localhost
 MYSQL_HOST = '127.0.0.1'
-MYSQL_USER = 'nfckickerbot_user'
-MYSQL_PASSWORD = 'your_password'
+MYSQL_USER = os.environ.get('MYSQL_USER')
+MYSQL_PASSWORD = os.environ.get('MYSQL_PASSWORD')
 MYSQL_DATABASE = 'nfckickerbot'
 
 # Global variables

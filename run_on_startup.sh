@@ -6,5 +6,8 @@ ngrok http --domain=firm-wahoo-equally.ngrok-free.app 3000 &
 # Start TightVNC
 tightvncserver &
 
+# Set your environment variables
+source /home/bartmuskala/Documents/NFC-KICKERBOT/set_env.sh &
+
 # Start your Python script
-python /home/bartmuskala/Documents/Coding/nfc-bot-final.py &
+python /home/bartmuskala/Documents/NFC-KICKERBOT/nfcbot.py &
