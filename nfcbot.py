@@ -178,6 +178,7 @@ def on_card_read(tag):
         elif not game_in_progress and username is not None and username not in players and len(players) == 3:
             players.add(username)
             print(f'Player {len(players)} joined the game.')
+            print(f'Game officially started. Now listening to 2 of the 4 player cards to be scanned to know the winner.')
             game_in_progress = True
 
         elif game_in_progress and username in players:
@@ -234,7 +235,6 @@ def add_database_user(card_id, username, user_id, status):
         db_connection.commit()
         print(f"User with card_id {card_id} added successfully.")
         send_slack_message(f'Welkom <@{user_id}>! We hebben de kaart aan jou gelinkt. Je kan vanaf nu deelnemen (je moet wel nog even opnieuw scannen).')
-
     else:
         # Insert the user into the database
         cursor.execute('INSERT INTO players (card_id, username, user_id) VALUES (%s, %s, %s)', (card_id, username, user_id))
