@@ -1,4 +1,4 @@
-# NFC KICKERBOT
+# NFC KICKERBOT 2
 
 ## The NFC Kickerbot in a nutshell
 
